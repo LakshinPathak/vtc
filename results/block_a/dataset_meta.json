@@ -1,0 +1,36 @@
+{
+  "n_raw": 113407,
+  "n_unique": 43877,
+  "n_dropped_dupes": 69530,
+  "label_counts_unique": {
+    "0": 42890,
+    "1": 987
+  },
+  "n_features": 24,
+  "feature_names": [
+    "flow_duration",
+    "protocol",
+    "srcport",
+    "dstport",
+    "byte_count",
+    "packet_count",
+    "Tot Bwd Pkts",
+    "TotLen Fwd Pkts",
+    "TotLen Bwd Pkts",
+    "Fwd Pkt Len Std",
+    "Flow Pkts/s",
+    "Fwd PSH Flags",
+    "Bwd PSH Flags",
+    "Fwd URG Flags",
+    "Bwd URG Flags",
+    "Fwd Header Len",
+    "Bwd Header Len",
+    "Pkt Len Var",
+    "FIN Flag Cnt",
+    "SYN Flag Cnt",
+    "RST Flag Cnt",
+    "Pkt Size Avg",
+    "Init Fwd Win Byts",
+    "Init Bwd Win Byts"
+  ]
+}

@@ -1,0 +1,26 @@
+# Internal planning notes — not in this GitHub tree
+docs/
+
+# IEEE / Overleaf manuscript — not in this GitHub tree
+manuscript/
+*.tex
+*.bib
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+
+# Dataset CSV (see data/DATA.md)
+data/*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+.env
+.idea/
+.vscode/

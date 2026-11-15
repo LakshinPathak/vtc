@@ -1,0 +1,101 @@
+{
+  "logreg": {
+    "name": "logreg",
+    "accuracy": 0.9976071103008204,
+    "f1": 0.9491525423728814,
+    "roc_auc": 0.9999704153040448,
+    "confusion": [
+      [
+        8559,
+        20
+      ],
+      [
+        1,
+        196
+      ]
+    ],
+    "n_params": 25
+  },
+  "tinyml_mlp": {
+    "name": "tinyml_mlp",
+    "accuracy": 0.9775524156791249,
+    "f1": 0.0,
+    "roc_auc": 0.8322559573223011,
+    "confusion": [
+      [
+        8579,
+        0
+      ],
+      [
+        197,
+        0
+      ]
+    ],
+    "n_params": 545,
+    "temperature": 0.22797556221485138,
+    "ms_per_flow_cpu": 0.09898432999762008
+  },
+  "logreg_report": "              precision    recall  f1-score   support\n\n           0     0.9999    0.9977    0.9988      8579\n           1     0.9074    0.9949    0.9492       197\n\n    accuracy                         0.9976      8776\n   macro avg     0.9536    0.9963    0.9740      8776\nweighted avg     0.9978    0.9976    0.9977      8776\n",
+  "tinyml_report": "              precision    recall  f1-score   support\n\n           0     0.9776    1.0000    0.9886      8579\n           1     0.0000    0.0000    0.0000       197\n\n    accuracy                         0.9776      8776\n   macro avg     0.4888    0.5000    0.4943      8776\nweighted avg     0.9556    0.9776    0.9665      8776\n",
+  "tau_sweep": [
+    {
+      "tau": 0.1,
+      "n_quarantine": 0,
+      "n_rate_limit": 0,
+      "chi_benign_byte_loss": 0.0,
+      "attack_byte_remain": 0.999999999994924
+    },
+    {
+      "tau": 0.3,
+      "n_quarantine": 0,
+      "n_rate_limit": 0,
+      "chi_benign_byte_loss": 0.0,
+      "attack_byte_remain": 0.999999999994924
+    },
+    {
+      "tau": 0.5,
+      "n_quarantine": 0,
+      "n_rate_limit": 0,
+      "chi_benign_byte_loss": 0.0,
+      "attack_byte_remain": 0.999999999994924
+    },
+    {
+      "tau": 0.7,
+      "n_quarantine": 0,
+      "n_rate_limit": 0,
+      "chi_benign_byte_loss": 0.0,
+      "attack_byte_remain": 0.999999999994924
+    },
+    {
+      "tau": 0.9,
+      "n_quarantine": 0,
+      "n_rate_limit": 0,
+      "chi_benign_byte_loss": 0.0,
+      "attack_byte_remain": 0.999999999994924
+    }
+  ],
+  "detect_only": {
+    "chi": 0.0,
+    "attack_remain": 0.999999999994924
+  },
+  "oracle": {
+    "chi": 0.0,
+    "attack_remain": 0.0
+  },
+  "rule_byte_count_eq_0": {
+    "accuracy": 0.8152917046490429,
+    "f1": 0.1955334987593052
+  },
+  "rule_packet_count_eq_0": {
+    "accuracy": 0.9511166818596172,
+    "f1": 0.4749082007343941
+  },
+  "notes": [
+    "Duplicates dropped before split. Unique Label 1 is only 987 rows; raw file duplicates attacks.",
+    "Scaler fit on train only.",
+    "LSTM/GRU omitted: 24 flow stats are not a time sequence.",
+    "Label 1 byte_count is identically 0; chi/attack_remain use unit flow mass, not bytes.",
+    "sigma = 1 - binary_entropy(p)/log(2); y_hat = 1 iff p>=0.5.",
+    "Actuator: y=0 -> none; y=1 and sigma>=tau -> quarantine; else rate-limit."
+  ]
+}
