@@ -36,7 +36,6 @@ From the **repo root**:
 python code/train_block_a.py
 python code/sim_plane_a_coupling.py
 python code/sim_plane_b_garlic.py
-python code/make_framework_fig.py
 ```
 
 Seed 42. Block A is the slow one. Plots land in `results/figures/` (IEEE column width) and `results/block_a/plots/`.
@@ -49,7 +48,6 @@ Seed 42. Block A is the slow one. Plots land in `results/figures/` (IEEE column 
 code/train_block_a.py          unique-row split, logreg vs TinyMLP, tau / chi
 code/sim_plane_a_coupling.py   PRR vs lambda (no-def / detect-only / TinyML+act / oracle)
 code/sim_plane_b_garlic.py     N=20, 4000 trials, AttAcc vs T_b and r_c
-code/make_framework_fig.py     stack drawing
 code/ieee_plot.py              matplotlib defaults
 results/block_a/               metrics, .pt, scaler, extra pngs
 results/plane_a/coupling_metrics.json
@@ -129,7 +127,7 @@ From `results/plane_b/plane_b_metrics.json`:
 
 Cover byte cost is linear in r_c. Cover is **not** added to Plane A λ. Sister RSUs that are also flooded (mix shrinks) are not in this JSON.
 
-Figs: `fig4a_attacc_vs_tb`, `fig4b_delay_attacc`, `fig4c_baselines_bars`. `framework.png` is the two-plane sketch.
+Figs: `fig4a_attacc_vs_tb`, `fig4b_delay_attacc`, `fig4c_baselines_bars`.
 
 AttAcc is Monte Carlo, not a mixnet proof. Compromised gateway is out of scope.
 
