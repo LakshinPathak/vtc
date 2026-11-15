@@ -1,7 +1,5 @@
-# Internal planning notes — not in this GitHub tree
-docs/
+# IEEE / Overleaf manuscript — keep local
 
-# IEEE / Overleaf manuscript — not in this GitHub tree
 manuscript/
 *.tex
 *.bib
