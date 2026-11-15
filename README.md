@@ -11,7 +11,7 @@ TinyML classifies on the safety clock (ms). A dumb local map `{none, rate-limit,
 
 Related PerCom tree (FedAvg + ML-KEM, different story): https://github.com/LakshinPathak/ppt-pqc-percom
 
-LaTeX / Overleaf is kept local (`manuscript/`). This repo is scripts, JSON, figures, and the notes under `docs/`.
+LaTeX / Overleaf is kept local (`manuscript/`). This repo is scripts, JSON, and figures.
 
 ---
 
@@ -51,18 +51,13 @@ code/sim_plane_a_coupling.py   PRR vs lambda (no-def / detect-only / TinyML+act 
 code/sim_plane_b_garlic.py     N=20, 4000 trials, AttAcc vs T_b and r_c
 code/make_framework_fig.py     stack drawing
 code/ieee_plot.py              matplotlib defaults
-docs/PAPER_STORY.md            problem lock (read this if you touch KPIs)
-docs/RELATED_WORK.md
-docs/FIGURE_PLAN.md
 results/block_a/               metrics, .pt, scaler, extra pngs
 results/plane_a/coupling_metrics.json
 results/plane_b/plane_b_metrics.json
 results/figures/               pdf + png
 ```
 
-`docs/PAPER2_*` and `SECOND_PAPER_PLAN.md` are leftover notes for a later QKD/BB84 angle. Ignore them for this experiment.
-
-D / M / R: TinyML is just `f_θ`. D calls it. Only M may set `a`. Only R packs garlic. Gemini, if you even wire it, is after unwrap. ASCII of that bus is in `docs/PAPER_STORY.md` §3.
+D / M / R: TinyML is just `f_θ`. D calls it. Only M may set `a`. Only R packs garlic. Gemini, if you even wire it, is after unwrap.
 
 ---
 
